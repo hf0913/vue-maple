@@ -4,7 +4,8 @@ module.exports = {
         '**/dist/**',
         '**/node_modules/**',
         'src/assets/global.css',
-        'src/assets/icons/maple-icons.css'
+        'src/assets/icons/maple-icons.css',
+        '**/static/**'
     ],
     rules: {
         'declaration-block-trailing-semicolon': [
