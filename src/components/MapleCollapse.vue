@@ -99,11 +99,9 @@ export default {
             }),
             changeAccordion = (item: any) => {
                 const d = new Set();
-                let c = 1;
 
                 for (const [key, value] of Object.entries(collapse.value)) {
-                    // if ((value as any).collapsed) d.add(key);
-                    if (value.collapsed) d.add(key);
+                    if ((value as any).collapsed) d.add(key);
                 }
                 if (type.value === 'multiple') {
                     d.has(item.key + '')
