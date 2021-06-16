@@ -3,7 +3,11 @@
     "scripts": {
         "start": "vite --open",
         "build": "vue-tsc --noEmit && vite build",
-        "serve": "vite preview"
+        "serve": "vite preview",
+        "lint:js": "eslint --ext .ts,.vue ./src",
+        "lint:style": "stylelint **/*.{vue,scss,css} --ignore-pattern static",
+        "lint": "npm run lint:js && npm run lint:style",
+        "lint:fix": "eslint --fix --ext .ts,.vue ./src"
     },
     "dependencies": {
         "vue": "^3.0.5"
@@ -34,9 +38,18 @@
         }
     },
     "lint-staged": {
-        "*.{ts,vue}": [
-            "eslint --ext .vue,.ts --fix ./src",
-            "git add"
+        "*.ts": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{scss,css}": [
+            "stylelint --fix",
+            "prettier --write"
+        ],
+        "*.vue": [
+            "eslint --fix",
+            "stylelint --fix",
+            "prettier --write"
         ]
     }
 }
