@@ -1,0 +1,11 @@
+<template>
+    <svg class="bi" width="32" height="32" fill="currentColor">
+        <use xlink:href="./bootstrap-icons.svg#heart-fill" />
+    </svg>
+</template>
+
+<script>
+import './bootstrap-icons.css';
+
+export default {};
+</script>
