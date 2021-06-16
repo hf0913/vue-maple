@@ -5,7 +5,8 @@ module.exports = {
         '**/node_modules/**',
         'src/assets/global.css',
         'src/assets/icons/maple-icons.css',
-        '**/static/**'
+        '**/static/**',
+        '**/*.json/**'
     ],
     rules: {
         'declaration-block-trailing-semicolon': [
