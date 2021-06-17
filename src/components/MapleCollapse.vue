@@ -127,6 +127,7 @@ export default {
 .collapse-show {
     max-height: 300px;
     transition: max-height 1s ease;
+    background: RED;
 }
 .collapse-hide {
     max-height: 0;
